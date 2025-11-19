@@ -11,7 +11,7 @@ Route::get('/', function () {
     return view('Portfolio');
 });
 Route::get('/register', [Authcontroller::class, 'showRegister'])->name('register.form');
-Route::post('/register', [Authcontroller::class, 'performRegister'])->name('register');
+Route::post('/register', [Authcontroller::class, 'Register'])->name('register');
 
 Route::get('/login', [Authcontroller::class, 'showLogin'])->name('login.form');
 Route::post('/login', [Authcontroller::class, 'performLogin'])->name('login');
