@@ -16,6 +16,7 @@ class AuthController extends Controller
     function showLogin(){
         return view('authentication.login');
     }
+
     function register(Request $request){
         $request->validate([
             'name'      => 'required|string|max:255',
@@ -31,6 +32,7 @@ class AuthController extends Controller
         return redirect()->route('login.form')->with('success','Registration 
         Successfull Yipy!!');
     }
+    
     function login(Request $request){
 
     }
